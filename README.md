@@ -7,21 +7,30 @@ Ingester of SNAP json rdf data for SigmaJS
 
 ### Nodes
 
-{"label":"Cap Nord","x":-693.8167724609375,"y":-305.88018798828125,"id":"532","color":"rgb(0,204,204)","size":6.837328910827637}
-
 | Key     | Type     | Required | Description
 |---------|----------|----------|---------------
-| label   | string   |     .    |
-| x       | float    |     X    |
-| y       | float    |     X    |
-| id      | string   |     X    |
-| color   | css      |     X    |
-| size    | float    |     X    |
+| label   | string   |          | Text to display
+| x       | float    |     X    | (Could be 0)
+| y       | float    |     X    | (Could be 0)
+| id      | string   |     X    | Unique ID reused in *Edges*
+| color   | css      |          | Color such as `rgb(0,204,204)`
+| size    | float    |          | (Could be 1.0)
 
 ### Edges
 
 | Key     | Type     | Required | Description    
 |---------|----------|----------|-------------------------
-| source  | string   |     X    |
-| target  | string   |     X    |
-| id      | string   |     X    |
+| source  | string   |     X    | Source ID of the link for a directed edge
+| target  | string   |     X    | Target ID of the link
+| id      | string   |     X    | Id of the edge
+
+## How is a snap:bond written in json ?
+
+Two types of nodes up to now :
+
+### Relationship
+```javascript
+{
+
+}
+```

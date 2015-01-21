@@ -50,7 +50,7 @@
    *                                 with the related sigma instance as
    *                                 parameter.
    */
-  sigma.parsers.json = function(url, sig, callback) {
+  sigma.parsers.snap = function(url, sig, callback) {
     var graph,
         xhr = sigma.utils.xhr();
 
